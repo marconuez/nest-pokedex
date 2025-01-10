@@ -6,6 +6,7 @@ import { PokeResponse } from './interfaces/poke-response.interface';
 export class SeedService {
 
   private readonly axios: AxiosInstance = axios;
+  //ANTES DE INSERTAR POR LOTE
 
   async executeSeed() {
     const {data} = await this.axios.get<PokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=10')
